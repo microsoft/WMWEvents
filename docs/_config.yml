@@ -23,15 +23,24 @@ email: jgutherie@microsoft.com
 description: >- # this means to ignore newlines until "baseurl:"
   A set of GitHub pages to help customers in Microsoft's West-Midwest region find upcoming events. It also contains links to past events and materials.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-#github_username:  PennStateLefty
+url: "https://microsoft.github.io/WMWEvents/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-remote_theme: "jekyll/minima@1e8a445"
+theme: minima
 plugins:
-  - jekyll-remote-theme # add this line to the plugins list if you already have one
   - jekyll-feed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+header_pages:
+  - index.md
+  - past.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
